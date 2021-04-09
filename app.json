@@ -1,0 +1,12 @@
+{
+  "name": "tabirci",
+  "displayName": "tabirci",
+  "expo": {
+    "name": "tabirci",
+    "slug": "tabirci",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
