@@ -23,7 +23,8 @@ export default class Mesajlar extends Component {
     }
 
     eventClickListener = (viewId) => {
-        Alert.alert("alert", "event clicked" + viewId);
+        Alert.alert("alert", "event clicked"+viewId);
+
     }
 
     render() {
@@ -53,7 +54,7 @@ export default class Mesajlar extends Component {
                                         </View>
                                         <View style={styles.eventContent}>
                                             <Text style={styles.eventTime}>10:00 am - 10:45 am</Text>
-                                            <Text style={styles.description}>Lorem ipsum dolor sit amet, eli</Text>
+                                            <Text style={styles.description}>Lorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consecteturLorem ipsum dolor sit amet, elit consectetur</Text>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -84,12 +85,12 @@ const styles = StyleSheet.create({
     },
     eventDay: {
         fontSize: 50,
-        color: "#dcdcdc",
+        color: "#ffffff",
         fontWeight: "600",
     },
     eventMonth: {
         fontSize: 16,
-        color: "#ffffff",
+        color: "#efefef",
         fontWeight: "600",
     },
     eventContent: {
@@ -107,11 +108,11 @@ const styles = StyleSheet.create({
     },
     eventTime: {
         fontSize: 18,
-        color: "#0e0e0e",
+        color: "#151515",
     },
     userName: {
         fontSize: 16,
-        color: "#111111",
+        color: "#151515",
     },
 });
 

@@ -1,44 +1,77 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Mesajlar from "./pages/Mesajlar";
 import YeniRuya from "./pages/YeniRuya";
+import Profil from "./pages/Profil";
 
-function HomeScreen() {
-  return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-  );
-}
-function Gonder() {
-  return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-  );
-}
 
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen  name="Profil" component={HomeScreen} />
-          <Tab.Screen name="Gönder" component={YeniRuya} />
+      <NavigationContainer  >
+        <Tab.Navigator
+            tabBarOptions={{
+                activeTintColor: '#FFFFFF',
+                inactiveTintColor: '#878486',
+                style: {
+                    backgroundColor: '#633689',
+                },
+                labelStyle: {
+                    textAlign: 'center',
+                    textAlignVertical: 'center',
+                    fontSize: 16,
+                    paddingBottom:15
+
+                },
+                indicatorStyle: {
+                    borderBottomColor: '#87B56A',
+                    borderBottomWidth: 2,
+                },
+            }}
+            // tabBarOptions={{
+            //     activeTintColor: 'tomato',
+            //
+            //     inactiveTintColor: 'gray',
+            // }}
+        >
+          <Tab.Screen   name="Profil"  component={Profil} />
+          <Tab.Screen options={styles.slider} name="Gönder" component={YeniRuya} />
           <Tab.Screen name="Geçmiş" component={Mesajlar} />
         </Tab.Navigator>
       </NavigationContainer>
   );
 }
+const styles = StyleSheet.create({
+    tabContainer: {
+        height: 60,
+        shadowOffset: {
+            width: 0,
+            height: -1,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 4.0,
+        backgroundColor: "purple",
+        borderTopRightRadius: 20,
+        borderTopLeftRadius: 20,
+        elevation: 10,
+        position: "absolute",
+        bottom: 0,
+    },
+    slider: {
+        height: 5,
+        position: "absolute",
+        top: 0,
+        left: 10,
+        backgroundColor: "#e80505",
+        borderRadius: 10,
+        width: 50
+    },
+
+
+
+
+})
