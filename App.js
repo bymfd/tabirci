@@ -7,7 +7,6 @@ import YeniRuya from "./pages/YeniRuya";
 import Profil from "./pages/Profil";
 
 
-
 const Tab = createBottomTabNavigator();
 
 export default function App() {
